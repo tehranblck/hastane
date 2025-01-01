@@ -38,7 +38,7 @@ export default function Home() {
               {
                 icon: <FaAward className="w-8 h-8" />,
                 title: "Kaliteli Hizmet",
-                description: "Uluslararası standartlarda sağlık hizmeti sunuyoruz."
+                description: "Uluslararası   standartlarda sağlık hizmeti sunuyoruz."
               },
               {
                 icon: <FaHospital className="w-8 h-8" />,
