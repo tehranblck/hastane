@@ -1,6 +1,7 @@
 'use client'
 import { useState, useEffect } from 'react';
 import Link from 'next/link';
+import Image from 'next/image';
 
 const Header = () => {
     const [isScrolled, setIsScrolled] = useState(false);
@@ -16,17 +17,15 @@ const Header = () => {
     }, []);
 
     return (
-        <header className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300
+        <header className={`fixed top-0 left-0 py-4 right-0 z-50 transition-all duration-300
       ${isScrolled
                 ? 'bg-white/10 dark:bg-black/10 shadow-lg backdrop-blur-lg'
                 : 'bg-white/5 dark:bg-black/5 backdrop-blur-lg'}`}>
-            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="container mx-auto px-4 sm:px-6 lg:px-8">
                 <div className="flex justify-between items-center h-16">
                     {/* Logo */}
                     <Link href="/" className="flex items-center z-50">
-                        <span className="text-xl sm:text-2xl font-bold bg-gradient-to-r from-rose-500 to-teal-500 bg-clip-text text-transparent">
-                            LOGO
-                        </span>
+                        <Image src="/logo.svg" alt="Logo" width={100} height={100} />
                     </Link>
 
                     {/* Desktop Navigation */}
