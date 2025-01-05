@@ -74,7 +74,7 @@ export default function Home() {
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {[
-              { name: "Prof. Dr. Ahmet Yılmaz", position: "Kardiyoloji", image: "/doc2.JPG" },
+              { name: "Prof. Dr. Ahmet Yılmaz", position: "Kardiyoloji", image: "/doc2.jpg" },
               { name: "Prof. Dr. Ayşe Kaya", position: "Nöroloji", image: "/doc1.jpg" },
               { name: "Doç. Dr. Mehmet Demir", position: "Genel Cerrahi", image: "/doc3.JPG" },
               { name: "Uzm. Dr. Zeynep Ak", position: "Çocuk Sağlığı", image: "/doc_woman.jpg" }
