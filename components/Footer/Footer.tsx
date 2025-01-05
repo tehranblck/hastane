@@ -1,8 +1,13 @@
 import Link from 'next/link'
 import { FaFacebookF, FaTwitter, FaInstagram, FaLinkedinIn, FaPhoneAlt, FaEnvelope, FaMapMarkerAlt } from 'react-icons/fa'
 import { CONTACT_INFO } from '@/utils/constants'
+import { navLinks, NavLink } from '@/lib/navlinks'
 
-const Footer = () => {
+interface FooterProps {
+    navItems?: NavLink[];
+}
+
+const Footer = ({ navItems = navLinks }: FooterProps) => {
     return (
         <footer className="bg-gray-900 text-gray-300">
             <div className="container mx-auto px-6 py-12">
@@ -34,26 +39,16 @@ const Footer = () => {
                     <div>
                         <h3 className="text-white text-lg font-semibold mb-4">Hızlı Linkler</h3>
                         <ul className="space-y-2 flex flex-col items-center lg:items-start">
-                            <li>
-                                <Link href="/about" className="text-gray-400 hover:text-white transition-colors">
-                                    Hakkımızda
-                                </Link>
-                            </li>
-                            <li>
-                                <Link href="/services" className="text-gray-400 hover:text-white transition-colors">
-                                    Hizmetlerimiz
-                                </Link>
-                            </li>
-                            <li>
-                                <Link href="/doctors" className="text-gray-400 hover:text-white transition-colors">
-                                    Doktorlarımız
-                                </Link>
-                            </li>
-                            <li>
-                                <Link href="/contact" className="text-gray-400 hover:text-white transition-colors">
-                                    İletişim
-                                </Link>
-                            </li>
+                            {navItems.map((link) => (
+                                <li key={link.id}>
+                                    <Link
+                                        href={link.path}
+                                        className="text-gray-400 hover:text-white transition-colors"
+                                    >
+                                        {link.title}
+                                    </Link>
+                                </li>
+                            ))}
                         </ul>
                     </div>
 
