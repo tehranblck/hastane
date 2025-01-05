@@ -37,7 +37,7 @@ const doctors = [
     {
         name: "Prof. Dr. Ahmet Yılmaz",
         position: "Başhekim / Kardiyoloji Uzmanı",
-        image: "/doc2.JPG"
+        image: "/doc2.jpg"
     },
     {
         name: "Prof. Dr. Ayşe Kaya",
